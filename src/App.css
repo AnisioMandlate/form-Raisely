@@ -1,0 +1,95 @@
+.App {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App form {
+  margin: 80px auto;
+  padding: 20px;
+  max-width: 730px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App form h1 {
+  font-size: 36px;
+}
+
+.App form fieldset {
+  margin-top: 25px;
+  min-inline-size: auto;
+  border: 0;
+}
+
+.App form legend {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.App form legend h2 {
+  font-size: 24px;
+}
+
+.App form legend span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.App form .field-group {
+  flex: 1;
+  display: flex;
+}
+
+.App form .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.App form .field input[type="text"],
+.App form .field input[type="email"],
+.App form .field input[type="password"] {
+  flex: 1;
+  background: #f0f0f5;
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #6c6c80;
+}
+
+.App form .field input::placeholder {
+  color: #a0a0b2;
+}
+
+.App form .field label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.App form .field-group input + input,
+.App form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+@media (min-width: 300px) and (max-width: 660px) {
+  .App form .field-group {
+    flex: 1;
+    display: block;
+  }
+  .App form .field-group input + input,
+  .App form .field-group .field + .field {
+    margin-left: 0;
+  }
+}
