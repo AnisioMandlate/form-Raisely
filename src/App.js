@@ -36,7 +36,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>
-            <h2>Login</h2>
+            <h2>Sign Up</h2>
           </legend>
           <div className="field-group">
             <div className="field">
