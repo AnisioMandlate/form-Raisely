@@ -22,7 +22,7 @@ function App() {
         },
       })
       .then((message) => {
-        alert(message);
+        alert("User created sucessfully!");
       })
       .catch((err) => {
         if (err?.response?.status === 400) {
