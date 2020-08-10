@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import axios from "axios";
 
 function App() {
   const [firstName, setFirstName] = useState("");
@@ -10,9 +11,24 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(
-      `Hey: ${firstName} ${lastName}. Your email is ${email} and password: ${password}`
-    );
+    axios
+      .post("https://api.raisely.com/v3/signup", {
+        campaignUuid: "46aa3270-d2ee-11ea-a9f0-e9a68ccff42a",
+        data: {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
+        },
+      })
+      .then((message) => {
+        alert(message);
+      })
+      .catch((err) => {
+        if (err?.response?.status === 400) {
+          alert("This user already exist!");
+        }
+      });
   }
 
   return (
@@ -29,6 +45,7 @@ function App() {
                 type="text"
                 name="firstName"
                 id="fisrtName"
+                required
                 value={firstName}
                 onChange={(e) => {
                   setFirstName(e.target.value);
@@ -41,6 +58,7 @@ function App() {
                 type="text"
                 name="lastName"
                 id="lastName"
+                required
                 value={lastName}
                 onChange={(e) => {
                   setLastName(e.target.value);
@@ -54,6 +72,7 @@ function App() {
               type="email"
               name="email"
               id="email"
+              required
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -66,6 +85,7 @@ function App() {
               type="password"
               name="password"
               id="password"
+              required
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
