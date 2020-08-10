@@ -20,7 +20,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>
-            <h2>Dados</h2>
+            <h2>Login</h2>
           </legend>
           <div className="field-group">
             <div className="field">

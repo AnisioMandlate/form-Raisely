@@ -1,5 +1,5 @@
 .App {
-  background-color: #f5f5f5;
+  background: linear-gradient(180deg, #8257e5 50%, #f5f5f5 50%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   margin: 80px auto;
   padding: 20px;
   max-width: 730px;
-  background: #fff;
+  background: #f0f0f7;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -38,6 +38,8 @@
 
 .App form legend h2 {
   font-size: 24px;
+  color: #32264d;
+  font-weight: bolder;
 }
 
 .App form legend span {
@@ -61,7 +63,7 @@
 .App form .field input[type="email"],
 .App form .field input[type="password"] {
   flex: 1;
-  background: #f0f0f5;
+  background: #f8f8fc;
   border-radius: 8px;
   border: 0;
   padding: 16px 24px;
@@ -70,7 +72,7 @@
 }
 
 .App form .field input::placeholder {
-  color: #a0a0b2;
+  color: #9c98a6;
 }
 
 .App form .field label {
